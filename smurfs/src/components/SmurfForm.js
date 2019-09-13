@@ -24,25 +24,25 @@ const SmurfForm = props => {
                 id: Date.now()
             }
         props.addNewSmurf(newSmurf);
-        setSmurfs({name: '', age: 0, height: 0})
+        setSmurfs({name: '', age: '', height: ''})
     }
     
 
     return(
         <form onSubmit={submitForm}>
-            <label htmlfor="name"> Name: </label>
+            <label htmlFor="name"> Name: </label>
                 <input   
                 name="name"
                 value= {Smurfs.name}
                 onChange={changeHandler}
                 />
-            <label htmlfor="age"> Age: </label>
+            <label htmlFor="age"> Age: </label>
                 <input 
                 name="age"
                 value={Smurfs.age}
                 onChange={changeHandler}
                 />
-            <label htmlfor="height"> Height (cm): </label>
+            <label htmlFor="height"> Height (cm): </label>
                 <input 
                 name="height"
                 value={Smurfs.height}
@@ -55,7 +55,7 @@ const SmurfForm = props => {
     )
 }
 
-export default SmurfForm
+export default SmurfForm;
 
 
 
