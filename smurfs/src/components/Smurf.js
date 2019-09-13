@@ -18,9 +18,9 @@ const Smurf = ({getSmurf, smurfs, isFetching, error}) => {
             {smurfs.map(smurf => {
                 return (
                 <div>
-                    <h1>Name: {smurf.name}</h1> 
-                    <p>Age: {smurf.age}</p>
-                    <p>Height: {smurf.height}</p>
+                    <li>Name: {smurf.name}</li>
+                    <li>Age: {smurf.age}</li>
+                    <li>Height: {smurf.height}</li>
                 </div>
                 )
             })}

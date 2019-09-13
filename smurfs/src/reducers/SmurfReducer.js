@@ -15,7 +15,6 @@ export const initialState = {
 
 
 export const SmurfReducer = (state = initialState, action) => {   
-    console.log('im that reducer')
     switch(action.type){
         case FETCHING_SMURF_START: 
             return {
