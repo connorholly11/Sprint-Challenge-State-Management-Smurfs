@@ -4,10 +4,10 @@ import {getSmurf} from '../actions/index';
 
 const Smurf = (getSmurf, smurfs, isFetching, error) => {
 
-    useEffect(() => {
+    // useEffect(() => {
 
-        // getSmurf()
-    }, getSmurf)
+    //     // getSmurf()
+    // }, getSmurf)
 
     if (isFetching){
         return <h1>FETCHING API DATA</h1>
