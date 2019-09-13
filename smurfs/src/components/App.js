@@ -1,13 +1,22 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Smurf from './Smurf';
 import SmurfForm from './SmurfForm'
 
 const App = () => {
+
+  const [smurfs, setSmurfs] = useState([]);
+  console.log(smurfs);
+
+
+  const addNewSmurf = props => {
+    setSmurfs([...smurfs, props])
+  }
+
   return(
     <div>
       <Smurf />
-      <SmurfForm />
+      <SmurfForm addNewSmurf={addNewSmurf}/>
     </div>
 
   )
