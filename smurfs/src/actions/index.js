@@ -5,14 +5,14 @@ export const FETCHING_SMURF_SUCCESS = 'FETCHING_SMURF_SUCCESS';
 export const FETCHING_SMURF_FAILURE = 'FETCHING_SMURF_FAILURE';
 
 export const getSmurf = () => dispatch => {
-    dispatch({FETCHING_SMURF_START})
+    dispatch({type: FETCHING_SMURF_START})
 
     axios.get('http://localhost:3333/smurfs')
         .then(response => {
             console.log(response)
-            dispatch({FETCHING_SMURF_SUCCESS, payload:response.data})
+            dispatch({type: FETCHING_SMURF_SUCCESS, payload:response.data})
         })
         .catch(error => {
-            dispatch({FETCHING_SMURF_FAILURE, payload: `${error.response}`})
+            dispatch({type: FETCHING_SMURF_FAILURE, payload: `${error.response}`})
         })
 }

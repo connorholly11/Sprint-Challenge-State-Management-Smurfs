@@ -2,12 +2,12 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {getSmurf} from '../actions/index';
 
-const Smurf = (getSmurf, smurfs, isFetching, error) => {
+const Smurf = ({getSmurf, smurfs, isFetching, error}) => {
 
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     // getSmurf()
-    // }, getSmurf)
+        getSmurf()
+    }, getSmurf)
 
     if (isFetching){
         return <h1>FETCHING API DATA</h1>
