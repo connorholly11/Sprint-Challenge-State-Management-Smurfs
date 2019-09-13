@@ -1,3 +1,16 @@
+*  What problem does the context API help solve?
+    * It helps passing props from one component down to the another further down in the tree. Instead of passing props to each component along the way, we can just give access to props to all the components with context API
+*  In your own words, describe actions, reducers and the store and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+    * store is where the state is stored. It’s a central location we can see where changes are being made. Actions are functions that tell the browser what to do when someone performs a certain action type. The reducer takes the action and updates the state with it.
+*  What is the difference between Application state and Component state? When would be a good time to use one over the other?
+    * Application state goes over all your components. When you have state being passed around components then you want application state. If a state is specific to one component then you want component state.
+*  Describe redux-thunk, what does it allow us to do? How does it change our action-creators?
+    * redux thunk allows us to have a function within a function. It changes our action creators because now our action creator is function of another function and it allows us to dispatch each type.
+*  What is your favorite state management system you've learned and this sprint? Please explain why!
+    * I like redux, but its just hard to grasp. I can see where it would be useful when you have a bigger application (state is at one place and you can pass it around), but I can also see where it would get hard with an application. Having 50+ actions and 50+ reducers seems intimidating at the moment. 
+
+
+
 # Sprint Challenge: State Management - Smurfs
 
 This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored the context API, the reducer pattern, and Redux. In your challenge for this Sprint, you will demonstrate proficiency by creating an application that uses ReactJS to consume live data retrieved from the World Wide Web.
