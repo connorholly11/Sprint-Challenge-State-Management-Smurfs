@@ -12,4 +12,7 @@ export const getSmurf = () => dispatch => {
             console.log(response)
             dispatch({FETCHING_SMURF_SUCCESS})
         })
+        .catch(error => {
+            dispatch({FETCHING_SMURF_FAILURE, payload: `${error.response}`})
+        })
 }
