@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 import Smurf from './Smurf';
-import SmurfForm from './SmurfForm'
+import SmurfForm from './SmurfForm';
+import SubmitForm from './SubmitForm';
 
 const App = () => {
 
@@ -15,8 +16,9 @@ const App = () => {
 
   return(
     <div>
-      <Smurf />
+      <Smurf smurfs={smurfs}/>
       <SmurfForm addNewSmurf={addNewSmurf}/>
+      {/* <SubmitForm /> */}
     </div>
 
   )
